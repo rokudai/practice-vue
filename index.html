@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My page</title>
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <!-- FONT OSWALD -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap" rel="stylesheet"> 
+    <!-- CUSTOM CSS --> 
+    <link rel="stylesheet" href="css/main.css">
+    <!-- MATERIALIZE CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+</head>
+<body>
+    <div id="appVue"> 
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+                <!--- MAIN MENU --->
+                <nav class="wrap" id="wrap">
+                    <div class="nav-wrapper">
+                      <a href="#!" class="brand-logo">Logo</a>
+                      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                      <ul class="right hide-on-med-and-down">
+                        <li><a href="sass.html">Sass</a></li>
+                        <li><a href="badges.html">Components</a></li>
+                        <li><a href="collapsible.html">Javascript</a></li>
+                        <li><a href="mobile.html">Mobile</a></li>
+                      </ul>
+                    </div>
+                    </nav>
+                    <ul class="sidenav" id="mobile-demo">
+                    <li><a href="sass.html">Sass</a></li>
+                    <li><a href="badges.html">Components</a></li>
+                    <li><a href="collapsible.html">Javascript</a></li>
+                    <li><a href="mobile.html">Mobile</a></li>
+                </ul>
+        <div class="container-v2">
+            <!-- SHOWCASE -->
+            <header class="showcase">
+                <h2>Big News Today!</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id dolor laudantium rerum, excepturi est praesentium
+                  natus qui? Tempora rerum, numquam inventore eligendi in, nostrum reprehenderit, eum cumque fugit eaque
+                  similique!</p>
+                <a href="#" class="btn">
+                  Read more <i class="fas fa-angle-double-right"></i>
+                </a>
+            </header>
+
+            <!-- NEW CARDS -->
+            <div class="news-cards">
+                <div class="card" v-for="item in service">
+                    <div class="card-image waves-effect waves-block waves-light">
+                      <img class="activator" src="img/news1.jpg">
+                        <pre>{{ item.link }}</pre>
+                    </div>
+                    <div class="card-content">
+                      <span class="card-title activator grey-text text-darken-4">{{ item.name }}<i class="material-icons right">Ver mas</i></span>
+                    </div>
+                    <div class="card-reveal">
+                      <span class="card-title grey-text text-darken-4">{{ item.name }}<i class="material-icons right">close</i></span>
+                      <p>{{ item.description }}</p>
+                    </div>
+                  </div>             
+            </div>
+
+            <!-- BANNER BASE ONE -->
+            <section class="cards-banner-one">
+                <div class="content">
+                    <h2>Lorem, ipsum dolor.</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                       Sequi quidem cupiditate numquam, officiis iure vitae. Recusandae 
+                       eos dicta modi iusto!</p>
+                       <a href="#" class="btn">Learn More <i class="fas fa-angle-double-right"></i></a>
+                </div>
+
+            </section>
+
+            <!-- NEW CARDS -->
+            <div class="news-cards">
+                            <div>
+                                <img src="img/news1.jpg" alt="News 1">
+                                <h3>Lorem, ipsum dolor.</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, amet. Culpa placeat quae mollitia libero facere! Ad eius facere culpa.</p>
+                                <a href="#"> Learn More <i class="fas fa-angle-double-right"></i></a>
+                            </div>
+                            <div>
+                                <img src="img/news2.jpg" alt="News 2">
+                                <h3>Lorem, ipsum dolor.</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, amet. Culpa placeat quae mollitia libero facere! Ad eius facere culpa.</p>
+                                <a href="#"> Learn More <i class="fas fa-angle-double-right"></i></a>
+                            </div>
+                            <div>
+                                <img src="img/news3.jpg" alt="News 3">
+                                <h3>Lorem, ipsum dolor.</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, amet. Culpa placeat quae mollitia libero facere! Ad eius facere culpa.</p>
+                                <a href="#"> Learn More <i class="fas fa-angle-double-right"></i></a>
+                            </div>
+                            <div>
+                                <img src="img/news4.jpg" alt="News 4">
+                                <h3>Lorem, ipsum dolor.</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti, amet. Culpa placeat quae mollitia libero facere! Ad eius facere culpa.</p>
+                                <a href="#"> Learn More <i class="fas fa-angle-double-right"></i></a>
+                            </div>
+            </div>
+            
+            <!-- BANNER BASE TWO -->
+            <section class="cards-banner-two">
+                <div class="content">
+                    <h2>Lorem, ipsum dolor.</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                       Sequi quidem cupiditate numquam, officiis iure vitae. Recusandae 
+                       eos dicta modi iusto!</p>
+                       <a href="#" class="btn">Learn More <i class="fas fa-angle-double-right"></i></a>
+                </div>
+
+            </section>
+        </div>
+
+        <div class="footer-links">
+            <div class="footer-container">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <h3>Title One</h3>
+                        </a>
+                    </li>
+                    <li v-for="item in list">
+                        <a href="#">{{ item.keep }}</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <h3>Title One</h3>
+                        </a>
+                    </li>
+                    <li v-for="item in list">
+                        <a href="#">{{ item.keep }}</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <h3>Title One</h3>
+                        </a>
+                    </li>
+                    <li v-for="item in list">
+                        <a href="#">{{ item.keep }}</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <h3>Title One</h3>
+                        </a>
+                    </li>
+                    <li v-for="item in list">
+                        <a href="#">{{ item.keep }}</a>
+                    </li>          
+                </ul>
+            </div>
+        </div>
+
+        <footer class="footer">
+            Copyright 2020
+        </footer>
+
+    </div>
+         <!-- VUE COMPONENTS -->
+         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+         <!-- SCROLL REVEAL -->
+        <script src="https://unpkg.com/scrollreveal"></script>
+         <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <!-- CUSTOM JS -->
+        <script src="js/app.js"></script>
+        <script>
+            const vm = new Vue({
+                el: '#appVue',
+                data: {
+                    list: [
+                        {keep: 'BlockChain', completed: false},
+                        {keep: 'BlockChain', completed: false},
+                        {keep: 'BlockChain', completed: true},
+                        {keep: 'BlockChain', completed: true},
+                        {keep: 'BlockChain', completed: true},
+                        {keep: 'BlockChain', completed: true},
+                    ],
+                    service: [
+                        {name: 'Transporte Carga Nacional', description: "Poco a poco hemos venido cubriendo más estados y ciudades del territorio venezolano.", link: 'img/news1.jpg'},
+                        {name: 'Servicio de Encomienda', description: "Puede contar con una rapidez garantizada de entrega sin importar la ubicación destino de su mercancía o productos", link: 'img/news2.jpg'},
+                        {name: 'Transporte Carga Liviana', description: "Consolidación de carga y servicio de encomienda para todo el territorio nacional.", link: 'img/news3.jpg'}
+                    ],
+                }
+            });
+            Vue.config.devtools = true;
+        </script>
+</body>
+</html>
